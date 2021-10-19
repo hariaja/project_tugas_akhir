@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use PDF;
 use App\Depot;
 use App\User;
 
@@ -132,5 +133,18 @@ class DepotController extends Controller
         $depot = Depot::findOrFail($id);
         $depot->user()->delete();
         return back()->with('success', 'Data Berhasil Dihapus');
+    }
+
+    public function cetak()
+    {
+        $depot = Depot::all();
+        $pdf = PDF::loadView('export', ['depot' => $depot]);
+        return $pdf->download('data-depot.pdf');
+    }
+
+    public function export()
+    {
+        $depot = Depot::all();
+        return view('export', ['depot' => $depot]);
     }
 }

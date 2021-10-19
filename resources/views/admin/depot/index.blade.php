@@ -10,7 +10,11 @@
   <div class="card-body">
 
     <div class="mb-3">
-      <button type="button" data-toggle="modal" data-target="#staticBackdrop" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-plus fa-sm  mr-2"></i>Tambah Data</button> 
+      <button type="button" data-toggle="modal" data-target="#staticBackdrop" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-plus fa-sm  mr-2"></i>Tambah Data</button>
+
+      <a href="{{ url('admin/depot/cetak') }}" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i class="fas fa-download fa-sm  mr-2"></i>Cetak</a>
+
+
 
       <form action="" method="GET" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
         <div class="input-group">

@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\Pengiriman;
 use App\Depot;
+use App\Pengiriman;
 use App\DetailKirim;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PengajuanController extends Controller
 {

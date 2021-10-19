@@ -44,6 +44,8 @@ Route::group(
         Route::get('depot/{id}/edit', 'DepotController@edit');
         Route::post('depot/{id}/update', 'DepotController@update');
         Route::get('depot/{id}/delete', 'DepotController@destroy');
+        Route::get('depot/cetak', 'DepotController@cetak')->name('print');
+        Route::get('export', 'DepotController@export');
         // Detail Pengiriman
         Route::get('pengiriman/{id}/kirim', 'PengirimanController@kirim');
         Route::post('pengiriman/{id}/proses', 'PengirimanController@proses');
